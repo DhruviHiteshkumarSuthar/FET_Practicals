@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>Music Store Page</title>
+        <link rel="stylesheet" href="prac2css.css">
+    </head>
+    <body>
+        <header>
+            <div class="dropdown" style="float:left;">
+                <button class="dropbtn"><img src="menu2.png" height="20px"/></button>
+                <div class="dropdown-content" style="left:0;">
+                    <a href="prac2.html">Home</a>
+                    <a href="#">Genre</a>
+                    <a href="#">Year</a>
+                    <a href="#">Album</a>
+                    <a href="#">Singer</a>
+                </div>
+            </div>
+        </header>
+        <br><br><br><br>
+        <form method="get" id="html5form">
+		
+			<fieldset>
+				<legend align="center">User Credentials</legend>
+					Name : <input type="text" pattern="[a-zA-Z]*" name="name" required autofocus/> <br/><br>
+					Email : <input type="email" name="email" placeholder="Enter Email Address" required size="50" /> <br/><br>
+					Password : <input type="password" name="pwd" placeholder="Enter Your Password" required maxlength="10" /> <br/><br>
+					Mobile : <input type="tel" name="mobile" pattern="[0-9]{10}" placeholder="Enter Mobile Number in 10 Digits" required /> <br/><br>
+                    Enter the captcha:<input type="text" required autofocus/> <br/><br>
+					Captcha : <input type="text" name="captcha" value="CA6F" disabled />
+			
+			</fieldset>
+			
+			<fieldset>
+				<legend align="center">Personal Information</legend>
+					Gender : <input type="radio" name="radiobutton" value="Male" /> Male 
+							 <input type="radio" name="radiobutton" value="Female"/> Female 
+							 <input type="radio" name="radiobutton" value="Others" /> Others <br/><br>
+					Fav Genre : <input type="checkbox" name="hobbies" value="Reading"/> Bollywood
+							  <input type="checkbox" name="hobbies" value="Music"/> Hip Hop
+							  <input type="checkbox" name="hobbies" value="Swimming"/> K-pop
+							  <input type="checkbox" name="hobbies" value="Cricket"/> Balads <br/><br>
+					Country : <select name="state">
+								<option value="USA">USA</option>
+								<option value="India">India</option>
+								<option value="Australia">Australia</option>
+								<option value="Japan">Japan</option>
+								<option value="Korea">South Korea</option>
+							</select><br/><br>
+                    Your Birth Date : <input type="date" />
+			</fieldset>
+			<br/>
+			<input type="submit" name="button1" value="Submit"/>
+		</form>
+        <footer>
+            <img src="insta.png" style="padding-left: 10px; padding-top: 5px;"/>@music_24
+            <a href="reg.html"><img src="reg.png" height="24px" style="padding-left: 10px; padding-top: 5px;"/>Register</a>
+            <a href="sub.html"><img src="sub.png" style="padding-left: 10px; padding-top: 5px;"/>Subscriptions</a>
+        </footer>
+    </body>
+</html>
