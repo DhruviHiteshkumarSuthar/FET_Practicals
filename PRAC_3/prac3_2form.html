@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Cowin Application</title>
+        <script>
+            function access()
+            {
+                let name = document.getElementById("name").value;
+                let nat = document.getElementById("nat").value;
+                let vac = document.getElementById("vac").value;
+                txt = confirm(`Name : ${name} \n Nationality : ${nat} \n Doses Taken : ${vac} \n Do you want to continue?`);
+                if(txt)
+                {
+                    if(vac>=1)
+                    {
+                        alert("You can access the portal!");
+                    }
+                    else
+                    {
+                        alert("Error! You should have atleast completed 1 dose, you cannot access the portal!");
+                    }
+                }
+                else 
+                {
+                    alert("You pressed CANCEL");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        Name : <input type="text" pattern="[a-zA-Z]*" id="name" required autofocus/> <br/><br>
+        Nationality : <input type="text" pattern="[a-zA-Z]*" id="nat" required autofocus/> <br/><br>
+        Vacine Doses taken:<input type="text" id="vac" required pattern="[0-9]{1}"/> <br/><br>
+        <button onclick="access()">Submit</button>
+    </body>
+</html>

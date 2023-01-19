@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>vote eligibility</title>
+        <script>
+            alert("Welcome! to the webpage.");
+            let name = prompt("Enter your name:");
+            let age = prompt("Enter your age:");
+            txt = confirm(`Name : ${name} \n Age : ${age} \n Do you want to continue?`);
+            if(txt)
+            {
+                if(age>=18)
+                {
+                    alert("You are eligible to vote!");
+                }
+                else
+                {
+                    alert("You are not eligible to vote!");
+                }
+            }
+            else 
+            {
+                alert("You pressed CANCEL");
+            }
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
