@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>prac6_1</title>
+    </head>
+    <body>
+        <h1>Remove the non_numeric values from given array</h1>
+        <p>array= [NaN, 0, 15, false, -22, ' ', undefined, 47, null]</p>
+        <p>1) The new array:</p>
+        <p id="arr"></p>
+        <p>2) Length of the new array:</p>
+        <p id="len"></p>
+        <p>3) Shuffled new array:</p>
+        <p id="shuffled"></p>
+        <script>
+            let arr=[NaN, 0, 15, false, -22, ' ', undefined, 47, null];
+            new_arr=arr.filter(x => typeof x === "number" && isFinite(x) && x!==0);
+            document.getElementById('arr').innerHTML=new_arr;
+            document.getElementById('len').innerHTML=new_arr.length;
+            function shuffle(arr)
+            {
+                for(let i=new_arr.length-1; i>0; i--)
+                {
+                    let j=Math.floor(Math.random()*(i+1))
+                    let temp=arr[i];
+                    arr[i]=arr[j];
+                    arr[j]=temp;
+                }
+                return arr;
+            }
+            document.getElementById('shuffled').innerHTML=shuffle(new_arr);
+        </script>
+    </body>
+</html>
