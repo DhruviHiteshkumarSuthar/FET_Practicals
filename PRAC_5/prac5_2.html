@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Prac5_2</title>
+    </head>
+    <body>
+        <h1>Salaries of 5 Employees</h1>
+        <p id="e1"></p>
+        <p id="e2"></p>
+        <p id="e3"></p>
+        <p id="e4"></p>
+        <p id="e5"></p>
+        <script>
+            let each=250;
+            let emp1={
+                name:"Dhruvi",
+                working_days:25
+            };
+            let emp2={
+                name:"Prarthi",
+                working_days:28
+            };
+            let emp3={
+                name:"Hetvi",
+                working_days:15
+            };
+            let emp4={
+                name:"Riya",
+                working_days:19
+            };
+            let emp5={
+                name:"Yashika",
+                working_days:11
+            };
+            document.getElementById('e1').innerHTML="1) Name: "+emp1.name+", Salary: "+(emp1.working_days*each);
+            document.getElementById('e2').innerHTML="2) Name: "+emp2.name+", Salary: "+(emp2.working_days*each);
+            document.getElementById('e3').innerHTML="3) Name: "+emp3.name+", Salary: "+(emp3.working_days*each);
+            document.getElementById('e4').innerHTML="4) Name: "+emp4.name+", Salary: "+(emp4.working_days*each);
+            document.getElementById('e5').innerHTML="5) Name: "+emp5.name+", Salary: "+(emp5.working_days*each);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Prac5_1</title>
+        <script>
+            function algo()
+            {
+                let num = document.getElementById("num").value;
+                while(true)
+                {
+                    let s=0
+                    for(let i=1; i<=num ; i++)
+                    {
+                        if(num%i==0)
+                        {
+                            s+=i;
+                        }
+                    }
+                    if((s)/2==num)
+                    {
+                        document.getElementById('per').innerHTML=num;
+                        break;
+                    }
+                    else
+                    {
+                        num++;
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Perfect Number</h1>
+        Enter a number:<input type="number" id="num"/> <br/><br>
+        <button onclick="algo()">Submit</button>
+        <p>The next perfect number after the entered number is:</p>
+        <p id="per"></p>
+    </body>
+</html>
