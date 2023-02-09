@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>PRAC_8</title>
+    </head>
+    <body>
+        <h1>Birthday cake promise</h1>
+        <p>Kayo: I promise to make a cake for your Birthday.</p>
+        Health: <input type="text" pattern="[a-zA-Z]*" id="health" required autofocus/> <br/><br>
+        No. of cakes:<input type="number" id="cake" required/> <br/><br>
+        <button onclick="main()">Submit</button>
+        <p id="ans"></p>
+        <p id="one"></p>
+        <script>
+            function main()
+            {
+                function myDisplay(some)
+                {
+                    document.getElementById("ans").innerHTML=some;
+                }
+                let myPromise=new Promise(function(myResolve,myReject)
+                {
+                    let x=document.getElementById("health").value;
+                    let y=document.getElementById("cake").value;
+                    if(x=='healthy' && y>0)
+                    {
+                        myResolve('Kayo is healthy.\nI have '+y+' cakes and I am happy.');
+                    }
+                    else
+                    {
+                        myReject('Kayo is sick.\nThere is no cake and I am sad.')
+                    }
+                });
+                myPromise.then
+                (
+                    function(value) {myDisplay(value);},
+                    function(error) {myDisplay(error);}
+                );
+                document.getElementById("one").innerHTML='I still have a party!';
+            }
+        </script>
+    </body>
+</html>
