@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>Prac_9</title>
+        <style>
+        h1
+        {
+            background-color: #1fc1bcbd; 
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            display: block;
+            margin: 4px 2px;
+            font-size: 20px;
+        }
+        </style>
+    </head>
+    <body>
+            <h1 onmouseover="hdisplay()" onmouseout="nodisplay()">HTML</h1>
+            <p id="html"></p>
+            <h1 onmouseover="cdisplay()" onmouseout="nodisplay()">CSS</h1>    
+            <p id="css"></p>
+            <h1 onmouseover="jdisplay()" onmouseout="nodisplay()">JavaScript</h1>
+            <p id="js"></p>
+            <h1 onmouseover="ddisplay()" onmouseout="nodisplay()">DOM</h1>
+            <p id="dom"></p>
+            <h1 onmouseover="dhdisplay()" onmouseout="nodisplay()">DHTML</h1>
+            <p id="dhtml"></p>
+            <script>
+                function hdisplay()
+                {
+                    document.getElementById('html').innerHTML="The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript.";
+                }
+                function cdisplay()
+                {
+                    document.getElementById('css').innerHTML="The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript.";
+                }
+                function jdisplay()
+                {
+                    document.getElementById('js').innerHTML="The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript.";
+                }
+                function ddisplay()
+                {
+                    document.getElementById('dom').innerHTML="The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript.";
+                }
+                function dhdisplay()
+                {
+                    document.getElementById('dhtml').innerHTML="The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript.";
+                }
+                function nodisplay()
+                {
+                    document.getElementById('html').innerHTML='';
+                    document.getElementById('css').innerHTML='';
+                    document.getElementById('js').innerHTML='';
+                    document.getElementById('dom').innerHTML='';
+                    document.getElementById('dhtml').innerHTML='';
+                }
+            </script>
+    </body>
+</html>
