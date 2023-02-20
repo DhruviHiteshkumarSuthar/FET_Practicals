@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>Prac_10</title>
+    </head>
+    <body>
+        <form name="myForm">
+            Name:<input type="text" name="name" maxlength="20" required><br><br>
+            E-mail:<input type="text" name="email" required><br><br>
+            Mobile:<input type="text" name="mobile" required><br><br>
+            Password:<input type="password" name="pwd" minlength="8" maxlength="15" required><br><br>
+            Confirm Password:<input type="password" name="cpwd" required><br><br>
+            <input type="submit" onclick="validate()" value="Submit">
+        </form>
+        <script>
+            function validate()
+            {
+                let a=document.forms['myForm']['name'].value;
+                let b=document.forms['myForm']['email'].value;
+                let c=document.forms['myForm']['mobile'].value;
+                let d=document.forms['myForm']['pwd'].value;
+                let e=document.forms['myForm']['cpwd'].value;
+                letter=/^[A-Z][a-z]+$/;
+                email=/^\w+([.-]?\w+)@\w+([.-]?\w+)(\.\w{2,3})$/;
+                mob=/^\d{10}$/;
+                pwd=/^[A-Za-z]+([.#@%]?\w+)$/;
+                if(letter.test(a))
+                {
+                    if(email.test(b))
+                    {
+                        if(mob.test(c))
+                        {
+                            if(pwd.test(d) && pwd.test(e))
+                            {
+                                if(d===e)
+                                {
+                                    alert("You have successfully logged in.");
+                                }
+                                else
+                                {
+                                    alert("Your password does not match! Try Again!");
+                                }
+                            }
+                            else
+                            {
+                                alert("Enter password in correct format");
+                            }
+                        }
+                        else
+                        {
+                            alert("Enter your mobile number in correct format.")
+                        }
+                    }
+                    else
+                    {
+                        alert("Enter your email in correct format.");
+                    }
+                }
+                else
+                {
+                    alert("Enter your name in correct format.");
+                }
+            }
+        </script>
+    </body>
+</html>
